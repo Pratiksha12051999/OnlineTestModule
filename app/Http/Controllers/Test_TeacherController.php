@@ -43,7 +43,12 @@ class Test_TeacherController extends Controller
         $a=$_GET['test_id'];
         $b=$_GET['test_n'];
         $sect=$_GET['section'];
-         return view('add_question')->with('a',$a)->with('b',$b)->with('sect',$sect);
+        $last_qt = Qualitative_test::all()->where('setid',$a)->last();
+        $last_at = Analytical_test::all()->where('setid',$a)->last();
+        $last_ct = Creative_test::all()->where('setid',$a)->last();
+        $last_cot = Comprehension_test::all()->where('setid',$a)->last();
+        //return $qual;
+        return view('add_question')->with('a',$a)->with('b',$b)->with('sect',$sect)->with('last_qt',$last_qt)->with('last_at',$last_at)->with('last_ct',$last_ct)->with('last_cot',$last_cot);
      }
 
 /* ------------------------------------------------- QUALITATIVE STORE ----------------------------------------------------------- */
