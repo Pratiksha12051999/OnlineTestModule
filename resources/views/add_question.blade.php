@@ -36,11 +36,12 @@
         <input type="hidden" value="{{$a}}" name="test_id">
         <input type="hidden" value="{{$b}}" name="test_n">
         <input type="hidden" value="qualitative" name="section">
+                <?php $qt=$last_qt->qid+1; ?>
         <div class="card">
             <div class="card-header">
                 <div class="form-group">
                     <label>Question No.</label>
-                    <input type="text" name="q_number" class="form-control" placeholder="enter question number">
+                    <input type="text" name="q_number" class="form-control" value="{{$qt}}" readonly>
                 </div>
 
                 <div class="form-group">
@@ -149,11 +150,12 @@
         <input type="hidden" value="{{$a}}" name="test_id">
         <input type="hidden" value="{{$b}}" name="test_n">
         <input type="hidden" value="analytical" name="section">
+                <?php $qt=$last_at->qid+1; ?>
         <div class="card">
             <div class="card-header">
                 <div class="form-group">
                     <label>Question No.</label>
-                    <input type="text" name="q_number" class="form-control" placeholder="enter question number">
+                    <input type="text" name="q_number" class="form-control" value="{{$qt}}" readonly>
                 </div>
 
                 <div class="form-group">
@@ -262,11 +264,12 @@
         <input type="hidden" value="{{$a}}" name="test_id">
         <input type="hidden" value="{{$b}}" name="test_n">
         <input type="hidden" value="creative" name="section">
+                <?php $qt=$last_ct->qid+1; ?>
         <div class="card">
             <div class="card-header">
                 <div class="form-group">
                     <label>Question No.</label>
-                    <input type="text" name="q_number" class="form-control" placeholder="enter question number">
+                    <input type="text" name="q_number" class="form-control" value="{{$qt}}" readonly>
                 </div>
 
                 <div class="form-group">
@@ -387,6 +390,7 @@
         <input type="hidden" value="{{$a}}" name="test_id">
         <input type="hidden" value="{{$b}}" name="test_n">
         <input type="hidden" value="comprehension" name="section">
+                <?php $qt=$last_cot->qid+1; ?>
         <div class="card">
             <div class="card-header">
                 <div class="form-group">
@@ -396,7 +400,7 @@
 
                 <div class="form-group">
                     <label>Question No.</label>
-                    <input type="text" name="q_number" class="form-control" placeholder="enter question number">
+                    <input type="text" name="q_number" class="form-control" value="{{$qt}}" readonly>
                 </div>
 
                 <div class="form-group">
